@@ -3,6 +3,7 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 // 1. creo variabile prompt con richiesta di inserimento parola
+// il replaceAll (con le rispettive virgolette) mi aiuta nel caso in cui l'utente inserisca due parole staccate ma palindrome tra loro
 let userWord = prompt('Inserisci una parola!').toLowerCase().replaceAll(' ', '');
 
 
