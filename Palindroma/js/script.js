@@ -11,7 +11,7 @@ let userWord = prompt('Inserisci una parola!');
 // il metodo reverse: inverte l'array creato con split (in questo caso, le lettere)
 // il metodo join: riunisce le lettere della parola invertite dal metodo reverse
 function invert(letter){
-  let invertedString = letter.replaceAll().split(' ').reverse().join('');  
+  let invertedString = letter.replaceAll(' ','').split('').reverse().join('');  
   return invertedString;
 }
 
