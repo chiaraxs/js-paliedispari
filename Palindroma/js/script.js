@@ -3,7 +3,7 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 // 1. creo variabile prompt con richiesta di inserimento parola
-let userWord = prompt('Inserisci una parola!');
+let userWord = prompt('Inserisci una parola!').toLowerCase().replaceAll(' ', '');
 
 
 // 2. creo funzione 'invert' con argomento 'letter'.
@@ -11,7 +11,7 @@ let userWord = prompt('Inserisci una parola!');
 // il metodo reverse: inverte l'array creato con split (in questo caso, le lettere)
 // il metodo join: riunisce le lettere della parola invertite dal metodo reverse
 function invert(letter){
-  let invertedString = letter.replaceAll(' ','').split('').reverse().join('');  
+  let invertedString = letter.split('').reverse().join('');  
   return invertedString;
 }
 
