@@ -4,3 +4,10 @@
 // Sommiamo i due numeri.
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
+
+// 1. l'utente sceglie un numero (tra 1 e 5), pari o dispari
+ let userNumber = prompt('Scegli se inserire un numero pari o dispari')
+
+// 2. creo array con numeri pari
+
+// 3 creo array con numeri dispari
