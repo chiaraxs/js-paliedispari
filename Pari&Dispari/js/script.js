@@ -5,15 +5,37 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-// Utente inserisce PARI/DISPARI (prompt, puoi tenere proprio la stringa che inserisce l'utente, oppure 0/1 con parseInt)
-// Utente inserisce numero da 1 a 5
-// Genero numero casuale per computer, da 1 a 5
-// Sommo i due numeri
-// Controllo se la somma è pari/dispari
-// Verifico se il pari/dispari della somma coincide con la scelta che ho fatto io all'inizio
-// Se sì, ho vinto
-// Altrimenti, ho perso
 
-// 1. l'utente sceglie un numero (tra 1 e 5), pari o dispari
- let userNumber = prompt('Scegli se inserire un numero pari o dispari')
+// 1. l'utente sceglie se pari o dispari
+ let userChoise = prompt('Scegli, pari o dispari');
 
+ // 2. l'utente inserisce un numero da 1 a 5 
+ let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+
+ // 3. genero numero casuale da 1 a 5 con il math.random
+ function randomNumber(minNum, maxNum) {
+    const result = Math.floor(Math.random() * ((maxNum + 1) - minNum)) + minNum;
+    return result;
+}
+
+// 4. creo variabile per numeri casuali da assegnare al punteggio della macchina (machineNumber)
+let machineNumber = randomNumber(1,5);
+
+// 5. sommo i due numeri (numero scelto dall'utente + numero casuale della macchina)
+const total = userNumber + machineNumber;
+
+//6. creo funzione per controllare se la somma è pari/dispari
+// se il num è pari (modulo di 2) --> return come true (0)
+function isPari (num) {
+    return num % 2 === 0;
+}
+
+// 7. verifico se il pari/dispari della somma coincide con la scelta dell'utente
+// se la somma totale è pari e (&&) coincide con la scelta dell'utente e non è (NOT ||) non pari -> allora è dispari
+if ((isPari(total)) && userChoise === 'pari' || ((!isPari(total)) && userChoise === 'dispari')){
+    // se la somma coincide, ho vinto
+    console.log('Hai vinto!')
+} else {
+    // se la somma non coincide, ho perso
+    console.log('Hai perso!');
+}
