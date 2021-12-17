@@ -31,7 +31,8 @@ function isPari (num) {
 }
 
 // 7. verifico se il pari/dispari della somma coincide con la scelta dell'utente
-// se la somma totale è pari e (&&) coincide con la scelta dell'utente e non è (NOT ||) non pari -> allora è dispari
+// se la somma totale è pari e (&& AND) coincide (=== STRETTAMENTE UGUALE) con la scelta dell'utente 
+// oppure (|| OR) non è (! NOT) pari -> allora è dispari
 if ((isPari(total)) && userChoise === 'pari' || ((!isPari(total)) && userChoise === 'dispari')){
     // se la somma coincide, ho vinto
     console.log('Hai vinto!')
